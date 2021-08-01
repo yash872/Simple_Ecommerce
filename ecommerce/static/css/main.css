@@ -64,6 +64,12 @@ h1,h2,h3,h4,h5,h6{
 	padding: 5px;
 }
 
+.form-field-row{
+	width:500px;
+	display: inline-block;
+	padding: 5px;
+}
+
 .cart-row{
 	display: flex;
     align-items: flex-stretch;
@@ -96,4 +102,53 @@ h1,h2,h3,h4,h5,h6{
 
 .hidden{
 	display: none!important;
+}
+
+.box {
+	display: flex;
+}
+
+.box .inner {
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 2em;
+	font-family: cursive;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.box .inner:first-child {
+	background-color: indianred;
+	color: darkred;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-15deg);
+}
+
+.box .inner:last-child {
+	background-color: lightcoral;
+	color: antiquewhite;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(15deg);
+}
+
+.box .inner span {
+	position: absolute;
+	animation: marquee 3s linear infinite;
+}
+
+.box .inner:first-child span {
+	animation-delay: 1.5s;
+	left: -100%;
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+
+	to {
+		left: -100%;
+	}
 }
